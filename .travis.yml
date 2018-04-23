@@ -17,6 +17,9 @@ before_install:
 install:
   - pip install -e ./
 
+script:
+  - python -c 'from pupil_client import PupilClient'
+
 after_success:
     - flake8 pyluos
     - pip uninstall -y pyluos
