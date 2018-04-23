@@ -1,5 +1,7 @@
 # Pupil Client Library
 
+[![Build Status](https://travis-ci.org/pollen-robotics/pupil_client.svg?branch=master)](https://travis-ci.org/pollen-robotics/pupil_client)
+
 [Pupil-labs device](https://pupil-labs.com) client library. It retrieves the gaze 3d point from the [Pupil Remote](https://docs.pupil-labs.com/#network-plugins) software and its associate timestamp. The library works asynchronously.
 
 It works on Python >=2.7 & >=3.3.
