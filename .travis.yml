@@ -1,0 +1,25 @@
+language: python
+
+python:
+    - "2.7"
+    - "3.4"
+    - "3.5"
+    - "3.6"
+
+before_install:
+  - pip install --upgrade virtualenv
+  - virtualenv --python=python venv
+  - source venv/bin/activate
+  - python --version
+  - pip --version
+  - pip install flake8
+
+install:
+  - pip install -e ./
+
+after_success:
+    - flake8 pyluos
+    - pip uninstall -y pyluos
+
+after_failure:
+    - pip uninstall -y pyluos
