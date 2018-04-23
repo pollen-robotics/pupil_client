@@ -15,5 +15,8 @@ if __name__ == '__main__':
 
     while True:
         # Reads gaze 3d point and timestamp (done asynchronously).
-        print('Gaze point 3d: {} (at t={})'.format(pupil.gaze.pt3d, pupil.gaze.t))
+        (x, y, z) = pupil.gaze.pt3d
+        ttimestamp = pupil.gaze.t
+
+        print('Gaze point 3d: {} (at t={})'.format([x, y, z], timestamp)
         time.sleep(1)
